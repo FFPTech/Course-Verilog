@@ -7,4 +7,6 @@ module fxyz(F, X, Y, Z);
     and(X_nY, X_n, Y);
     and(XZ, X, Z);
     or(F, X_nY, XZ);
+
+    // Add formula here
 endmodule

@@ -1,3 +1,4 @@
+// vvp ldxa_tb.out 
 `timescale 1ns / 1ps
 
 // Define testing module
