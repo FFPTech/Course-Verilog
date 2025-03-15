@@ -8,10 +8,10 @@ module and_gate(X, Y, F);
     // STEP 2: Module structure 
 
     // a: AND logic (structure)
-    and(F, X, Y); // port(outputs, inputs)
+    // and(F, X, Y); // port(outputs, inputs)
 
     // b: AND logic (information)
-    // assign F = X & Y; // C/C++ syntax
+    assign F = X & Y; // C/C++ syntax
 
 // STEP 3: End module definition
 endmodule

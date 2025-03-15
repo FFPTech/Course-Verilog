@@ -19,15 +19,15 @@ module and_gate_tb;
   // Test sequence
   initial begin
     // Display header
-    $display("Welcome to the ISIG-Goma e-Lab");
+    $display("Welcome to the ISIG-Goma Nano-Electronics Lab");
     $display("X Y | F");
     $display("--------");
 
     // Apply test cases
     X = 0; Y = 0; #10; // set X=0, set Y=0, wait 10ns
-    $display("%b %b | %b", X, Y, F); // C/C++ syntax
+    $display("%b %b | %b", X, Y, F); // C/C++ syntax. %b = binary
 
-    X = 0; Y = 1; #10; // set X=0, set Y=1, wait 10ns
+    X = 0; Y = 1; #10; 
     $display("%b %b | %b", X, Y, F);
 
     X = 1; Y = 0; #10;
