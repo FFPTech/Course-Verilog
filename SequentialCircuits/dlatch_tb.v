@@ -4,7 +4,7 @@ module dlatch_tb;
     reg D, C;
     wire Q, Qn;
 
-    dlatch uut (
+    dlatch uut(
         .D(D), 
         .C(C), 
         .Q(Q), 

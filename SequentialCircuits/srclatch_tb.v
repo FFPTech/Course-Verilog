@@ -4,8 +4,12 @@ module srclatch_tb;
     reg S, R, C;
     wire Q, Qn;
 
-    srclatch uut (
-        .S(S), .R(R), .C(C), .Q(Q), .Qn(Qn)
+    srclatch uut(
+        .S(S), 
+        .R(R), 
+        .C(C), 
+        .Q(Q), 
+        .Qn(Qn)
     );
 
     initial begin
