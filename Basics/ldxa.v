@@ -1,5 +1,4 @@
-// iverilog -o ldxa_tb.out ldxa.v ldxa_tb.v
-// A combinational circuit implementing L = D~X + A (see CH01, slide 32)
+// iverilog -o .out/ldxa_tb.out ldxa.v ldxa_tb.v
 module ldxa(L, D, X, A);
     input D, X, A; // Circuit inputs
     output L; // Circuit outputs

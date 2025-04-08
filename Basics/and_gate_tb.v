@@ -1,4 +1,4 @@
-// vvp and_gate_tb.out
+// vvp .out/and_gate_tb.out
 `timescale 1ns / 1ps
 
 // Define testing module

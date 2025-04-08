@@ -1,5 +1,4 @@
-// iverilog -o and_gate_tb.out and_gate.v and_gate_tb.v
-// and_gate.v - Simple AND Gate Module
+// iverilog -o .out/and_gate_tb.out and_gate.v and_gate_tb.v
 // STEP 1: Module (circuit) definition
 module and_gate(X, Y, F);
     input X, Y; // declare input variables
