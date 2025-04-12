@@ -2,11 +2,11 @@
 `timescale 1ns / 1ns
 
 module register_tb;
-    reg [3:0] D;
+    reg [7:0] D;
     reg clk, clr;
-    wire [3:0] Q;
+    wire [7:0] Q;
 
-    register uut (
+    register #(8) uut (
         .D(D),
         .clk(clk),
         .clr(clr),
@@ -19,15 +19,15 @@ module register_tb;
 
     initial begin
         // Display the header for the monitor output
-        $display("Time\tclk\tclr\tD\tQ");
+        $display("Time\tclk\tclr\tD\t\tQ");
         $monitor("%0t\t%b\t%b\t%b\t%b", $time, clk, clr, D, Q);
 
         // Initialize signals
-        clr = 1; D = 4'b0000;  // Clear enabled, 
-        #10 clr = 0; D = 4'b1010; // After 10 ns, clear disabled, data 1010
-        #10 D = 4'b1111; // Load 1111
+        clr = 1; D = {8{1'b0}}; //4'b0000;  // Clear enabled, 
+        #10 clr = 0; D = 8'b10101001; // After 10 ns, clear disabled, data 1010
+        #10 D = 8'b11111111; // Load 1111
         #10 clr = 1;     // Clear register again
-        #10 clr = 0; D = 4'b1001; // Load 1001
+        #10 clr = 0; D = 8'b10010110; // Load 1001
 
         // End simulation after 20 ns
         #20;

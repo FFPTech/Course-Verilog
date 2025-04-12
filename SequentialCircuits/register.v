@@ -1,17 +1,18 @@
 // iverilog -o ./out/register_tb.out srclatch.v dlatch.v dflipflop.v register.v register_tb.v
 module register(D, clk, clr, Q);
-    input [3:0] D; // D = 4-bit input data
+    parameter N = 4;  // Default value for N, can be overridden during instantiation
+    input [N-1:0] D; // D = 4-bit input data
     input clk, clr; // clk = Clock, clr = Clear
-    output [3:0] Q; // Q = 4-bit output memory
-    wire [3:0] Qn;
-    wire [3:0] Din;
+    output [N-1:0] Q; // Q = 4-bit output memory
+    wire [N-1:0] Qn;
+    wire [N-1:0] Din;
 
     // Clear logic
-    assign Din = clr ? 4'b0000 : D; // Asign 4bit 0 if clr is high, otherwise assign D
+    assign Din = clr ? {N{1'b0}} : D; // Asign N-bit 0 if clr is 1, otherwise assign D
 
     genvar i;
     generate
-        for (i = 0; i < 4; i = i + 1) begin : dff_loop
+        for (i = 0; i < N; i = i + 1) begin : dff_loop
             dflipflop dff(
                 .D(Din[i]),
                 .clk(clk),
