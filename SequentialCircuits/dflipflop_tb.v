@@ -15,10 +15,8 @@ module dflipflop_tb;
     );
 
     // Clock generation: toggle every 5ns
-    initial begin
-        clk = 0; // Start at state 0
-        forever #5 clk = ~clk; // Toggle state
-    end
+    initial clk = 0; // Start at state 0
+    always #5 clk = ~clk; // Toggle state
 
     // Stimulus
     initial begin
