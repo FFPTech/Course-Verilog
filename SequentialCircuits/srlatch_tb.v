@@ -13,8 +13,8 @@ module srlatch_tb;
     );
 
     initial begin
-        $display("Time | S R | Q Qn");
-        $monitor("%4t | %b %b | %b %b", $time, S, R, Q, Qn);
+        $display("Time\t | S\t R\t | Q\t Qn");
+        $monitor("%4t\t | %b\t %b\t | %b\t %b", $time, S, R, Q, Qn);
 
         // Initial state
         S = 0; R = 0; #10;

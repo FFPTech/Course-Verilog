@@ -7,6 +7,6 @@ module srlatch(S, R, Q, Qn);
     output Q, Qn; // Outputs: Q and its complement
     
     // NOR feedback logic
-    assign Q  = ~(R | Qn); // Q is reset when R=1
-    assign Qn = ~(S | Q); // Qn is reset when S=1
+    assign Q  = ~(R & Qn); // Q is reset when R=1
+    assign Qn = ~(S & Q); // Qn is reset when S=1
 endmodule

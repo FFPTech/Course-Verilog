@@ -1,5 +1,6 @@
 // vvp ./out/srclatch_tb.out
 `timescale 1ns/1ns
+
 module srclatch_tb;
     reg S, R, C;
     wire Q, Qn;

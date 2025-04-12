@@ -1,5 +1,6 @@
 // vvp ./out/dlatch_tb.out
 `timescale 1ns/1ns
+
 module dlatch_tb;
     reg D, C;
     wire Q, Qn;
