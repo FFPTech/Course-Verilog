@@ -2,9 +2,9 @@
 `timescale 1ns / 1ns
 
 module register_tb;
-    reg [7:0] D;
+    reg [7:0] D; // 8-bit data
     reg clk, clr;
-    wire [7:0] Q;
+    wire [7:0] Q; // 8-bit memory
 
     register #(8) uut (
         .D(D),
