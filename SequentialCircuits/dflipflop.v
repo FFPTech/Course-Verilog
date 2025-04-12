@@ -1,9 +1,9 @@
 // iverilog -o ./out/dflipflop_tb.out srclatch.v dlatch.v dflipflop.v dflipflop_tb.v
 // D flip-flop using a master-slave configuration
 // Negative-edge triggered
-// Master is a D latch, Slave is an SR latch
+// Master is a D latch, Slave is an SRC latch
 module dflipflop(D, clk, Q, Qn);
-    input D, clk;
+    input D, clk; // D = Data, clk = Clock
     output Q, Qn;
     wire Qm, Qmn; // Intermediate signals between master and slave
 
